@@ -1,4 +1,4 @@
-import { Groups } from "@screens/Groups";
+import { NewGroup } from "@screens/NewGroup";
 import { ThemeProvider } from "styled-components/native";
 import theme from "@theme/index";
 import {
@@ -19,7 +19,7 @@ export default function App() {
         translucent
         barStyle="light-content"
       />
-      {fontsLoaded ? <Groups /> : <Loading />}
+      {fontsLoaded ? <NewGroup /> : <Loading />}
     </ThemeProvider>
   );
 }
