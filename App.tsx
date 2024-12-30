@@ -1,4 +1,3 @@
-import { Players } from "@screens/Players";
 import { ThemeProvider } from "styled-components/native";
 import theme from "@theme/index";
 import {
@@ -8,6 +7,7 @@ import {
 } from "@expo-google-fonts/roboto";
 import { Loading } from "@components/Loading";
 import { StatusBar } from "react-native";
+import { Routes } from "src/routes";
 
 export default function App() {
   const [fontsLoaded] = useFonts({ Roboto_400Regular, Roboto_700Bold });
@@ -19,7 +19,7 @@ export default function App() {
         translucent
         barStyle="light-content"
       />
-      {fontsLoaded ? <Players /> : <Loading />}
+      {fontsLoaded ? <Routes /> : <Loading />}
     </ThemeProvider>
   );
 }
