@@ -3,7 +3,7 @@ import { Container } from "./styles";
 import { Highlight } from "@components/Highlight";
 import { GroupCard } from "@components/GroupCard";
 import { useState, useCallback } from "react";
-import { FlatList } from "react-native";
+import { FlatList, Alert } from "react-native";
 import { ListEmpty } from "@components/ListEmpty";
 import { Button } from "@components/Button";
 import { useNavigation, useFocusEffect } from "@react-navigation/native";
@@ -22,6 +22,7 @@ export function Groups() {
       const data = await groupsGetAll();
       setGroups(data);
     } catch (error) {
+      Alert.alert("Turmas", "Não foi possível carregar as turmas.");
       console.log(error);
     }
   }
